@@ -7,6 +7,7 @@ let openFile = function(event) {
     reader.onload = function() {
         let text = reader.result;
         let node = document.getElementById('output');
+        node.textContent = text;
         let data = text.split('\n')
         let i;
         for ( i = 0; i < data.length; i++ ) {
@@ -28,7 +29,7 @@ let openFile = function(event) {
         }
 
         document.getElementById("loaded").innerText = "Loaded File"
-        node.textContent = text;
+        
     };
     reader.readAsText(input.files[0]);
 
