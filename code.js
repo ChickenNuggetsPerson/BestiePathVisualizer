@@ -28,7 +28,7 @@ let openFile = function(event) {
         }
 
         document.getElementById("loaded").innerText = "Loaded File"
-        node.innerText = text;
+        node.textContent = text;
     };
     reader.readAsText(input.files[0]);
 
